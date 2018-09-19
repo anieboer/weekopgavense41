@@ -104,7 +104,7 @@ def draw(path):
 def heuristic_cost_estimate(node: tuple, goal: tuple) -> int:
     x = goal[0] - node[0]
     y = goal[1] - node[1]
-    guess = x + y
+    guess = math.sqrt((x*x) + (y*y))
     return guess
 
 
